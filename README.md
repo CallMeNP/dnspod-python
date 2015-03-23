@@ -7,3 +7,14 @@ DNSPod for python
 ```bash
 python updateRecord.py -h
 ```
+```
+updateRecord.py usage:
+-h,--help: print help message.
+-v, --version: print script version
+-d, --domain: 域名 
+-r, --record-file: record file, 从 dnspod 客户端中导出
+-e, --email: 帐号
+-p, --password: 密码
+```
+
+记录文件使用dnspod客户端导出的txt文件。_请注意删除其中的NS记录_
