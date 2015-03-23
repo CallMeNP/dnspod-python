@@ -4,6 +4,7 @@
 from dnspod.apicn import *
 import sys
 import getopt
+import string
 
 
 def updateRecord(domain, record_file, email, password):
@@ -26,6 +27,7 @@ def updateRecord(domain, record_file, email, password):
     f = open(record_file)
     line = f.readline()
     while line:
+        line = string.strip(line)
         record_arr = line.split('\t')
         if len(record_arr) == 6:
             print ''
