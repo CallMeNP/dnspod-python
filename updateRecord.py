@@ -33,7 +33,10 @@ def updateRecord(domain, record_file, email, password):
             print ''
             print "RecordCreate"
             print record_arr
-            api = RecordCreate(record_arr[0], record_arr[1], record_arr[2], record_arr[3], record_arr[5], domain_id=domain_id, email=email, password=password)
+            if record_arr[1] == 'MX':
+                api = RecordCreate(record_arr[0], record_arr[1], record_arr[2], record_arr[3], record_arr[5], mx=record_arr[4], domain_id=domain_id, email=email, password=password)
+            else:
+                api = RecordCreate(record_arr[0], record_arr[1], record_arr[2], record_arr[3], record_arr[5], domain_id=domain_id, email=email, password=password)
             record = api().get("record", {})
             record_id = record.get("id")
             print "Record id", record_id
