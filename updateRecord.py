@@ -10,7 +10,7 @@ def updateRecord(domain, record_file, email, password):
     # 删除域名
     try:
         print "DomainRemove"
-        api = DomainRemove(domain, email=email, password=password)
+        api = DomainRemove(domain=domain, email=email, password=password)
         print api()
     except Exception as e:
         print e
