@@ -18,3 +18,9 @@ updateRecord.py usage:
 ```
 
 记录文件使用dnspod客户端导出的txt文件。_请注意删除其中的NS记录_
+
+参见 [testrecord.txt](github.com/CallMeNP/dnspod-python/blob/master/testrecord.txt)
+
+## Todo
+* 原example.py里的DomainRemove调用没有改成新的方式，或许应该用继承扩展而不是直接修改apicn
+* 原apicn的设计不太便捷
